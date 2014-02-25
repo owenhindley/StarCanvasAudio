@@ -1,4 +1,4 @@
-#N canvas 94 22 1643 950 10;
+#N canvas 93 43 1643 950 10;
 #X declare -path .;
 #X declare -path rj;
 #X declare -path ../pd;
@@ -112,7 +112,7 @@ to soundoutput.pd on your computer etc.;
 #X obj 551 121 r loadbang;
 #X msg 551 158 0.5;
 #X obj 35 236 vsl 15 128 60 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12065 1;
+-1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 3 0;
@@ -521,6 +521,9 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X text 84 121 Yeah I know...;
 #X floatatom 37 37 5 0 0 0 - - -;
 #X obj 37 37;
+#X text 39 39 comment;
+#X obj 37 37;
+#X text 39 39 comment;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X restore 494 650 pd keyboardControl;
@@ -529,7 +532,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X obj 438 590 bng 30 250 50 0 empty empty empty 17 7 0 10 -257985
 -1 -1;
 #X obj 157 160 vsl 15 128 60 80 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5715 1;
+-1 -1 4445 1;
 #X obj 315 664 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 919 140 845 946 ambience 0;
@@ -1241,6 +1244,8 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X text 361 565 Click here to test 'keyboard press';
 #X text 1260 707 Click here to test 'clap';
 #X text 498 135 OSC input routing;
+#X text 311 50 Change this argument to alter the listening port no.
+for OSC;
 #X connect 4 0 5 0;
 #X connect 4 0 30 0;
 #X connect 5 0 19 0;
