@@ -1,4 +1,4 @@
-#N canvas 130 47 1643 1099 10;
+#N canvas 94 22 1643 950 10;
 #X declare -path .;
 #X declare -path rj;
 #X declare -path ../pd;
@@ -13,7 +13,7 @@ to soundoutput.pd on your computer etc.;
 #X obj 35 79 declare -path ../../pd;
 #X restore 633 47 pd more_paths;
 #X obj 452 1085 soundoutput;
-#X obj 201 588 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 168 526 bng 30 250 50 0 empty empty empty 17 7 0 10 -257985
 -1 -1;
 #N canvas 757 23 689 600 starSynth 0;
 #X obj 73 264 makenote 20 1000;
@@ -112,7 +112,7 @@ to soundoutput.pd on your computer etc.;
 #X obj 551 121 r loadbang;
 #X msg 551 158 0.5;
 #X obj 35 236 vsl 15 128 60 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+-1 -1 12065 1;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 3 0;
@@ -179,7 +179,7 @@ to soundoutput.pd on your computer etc.;
 #X connect 8 0 4 0;
 #X connect 10 0 9 0;
 #X restore 14 120 pd baseChordProgression;
-#X obj 16 16 bng 30 250 50 0 empty empty Start_Chord_Progression 37
+#X obj 16 34 bng 30 250 50 0 empty empty Start_Chord_Progression 37
 7 0 10 -4034 -1 -1;
 #X obj 211 20 bng 30 250 50 0 empty empty Stop_Chord_Progression 37
 7 0 10 -258113 -1 -1;
@@ -224,7 +224,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 7 0 8 1;
 #X connect 8 0 2 0;
 #X connect 8 1 3 0;
-#X restore 172 806 pd globalFX;
+#X restore 171 835 pd globalFX;
 #N canvas 2977 155 830 665 playConstellationControl 0;
 #X obj 27 22 inlet;
 #X text 73 22 OSC message input;
@@ -402,7 +402,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 7 0 8 1;
 #X connect 8 0 2 0;
 #X connect 8 1 3 0;
-#X restore 709 796 pd globalFX;
+#X restore 704 808 pd globalFX;
 #N canvas 523 141 689 600 keysynth 0;
 #X obj 73 264 makenote 20 1000;
 #X obj 73 304 pack 0 0;
@@ -511,7 +511,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 4 1 5 1;
 #X connect 5 0 2 0;
 #X connect 5 1 3 0;
-#X restore 540 771 pd globalFX;
+#X restore 493 775 pd globalFX;
 #X obj 557 687 r rootnote;
 #N canvas 951 360 450 300 keyboardControl 1;
 #X obj 33 29 inlet;
@@ -519,16 +519,18 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X obj 38 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 84 121 Yeah I know...;
+#X floatatom 37 37 5 0 0 0 - - -;
+#X obj 37 37;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X restore 494 650 pd keyboardControl;
 #X obj 513 406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 447 610 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 438 590 bng 30 250 50 0 empty empty empty 17 7 0 10 -257985
 -1 -1;
 #X obj 157 160 vsl 15 128 60 80 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 5715 1;
-#X obj 325 650 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 315 664 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 919 140 845 946 ambience 0;
 #X obj 23 17 inlet;
@@ -731,7 +733,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 7 0 8 1;
 #X connect 8 0 2 0;
 #X connect 8 1 3 0;
-#X restore 304 804 pd globalFX;
+#X restore 314 791 pd globalFX;
 #N canvas 1252 267 497 536 tremolo 0;
 #X obj 45 28 inlet~;
 #X obj 285 23 inlet~;
@@ -765,7 +767,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 12 0 10 0;
 #X connect 13 0 10 0;
 #X connect 14 0 4 1;
-#X restore 308 833 pd tremolo;
+#X restore 313 831 pd tremolo;
 #X obj 806 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 469 67 747 964 gdrone 0;
@@ -773,7 +775,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X obj 165 298 s_osc NAME saw;
 #X obj 165 261 mtof;
 #X obj 29 282 vsl 15 128 0 0.2 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5600 1;
+-1 -1 3810 1;
 #X obj 263 298 s_osc NAME saw;
 #X obj 263 262 mtof;
 #X floatatom 167 113 5 0 0 0 - - -;
@@ -907,7 +909,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X floatatom 308 117 5 0 0 0 - - -;
 #X text 389 5 Melody seed (unique);
 #X obj 800 227 vsl 15 128 0 1 0 0 empty empty Synth_volume 0 -9 0 10
--261682 -1 -1 5500 1;
+-261682 -1 -1 6350 1;
 #X obj 75 527 *~ 0.5;
 #X obj 124 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1021,7 +1023,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 1 0 4 1;
 #X connect 4 0 2 0;
 #X connect 4 1 3 0;
-#X restore 1014 836 pd globalFX;
+#X restore 1022 834 pd globalFX;
 #X obj 695 302 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 663 325 s osc_playCustomConst;
@@ -1035,7 +1037,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X obj 102 314 r loadbang;
 #X obj 41 469 *~;
 #X obj 281 298 vsl 15 128 0 1 0 0 empty empty Sample_Volume 0 -9 0
-10 -261682 -1 -1 12700 1;
+10 -261682 -1 -1 6350 1;
 #X obj 251 166 soundfiler;
 #X obj 252 73 r loadbang;
 #X obj 282 230 r loadbang;
@@ -1073,7 +1075,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 -1 -1;
 #X obj 726 288 s osc_clap;
 #X obj 1236 686 r osc_clap;
-#X obj 1237 731 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1237 727 bng 30 250 50 0 empty empty empty 17 7 0 10 -257985
 -1 -1;
 #N canvas 297 267 953 719 keysynth 1;
 #X obj 73 264 makenote 20 1000;
@@ -1223,7 +1225,7 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 1 0 4 1;
 #X connect 4 0 2 0;
 #X connect 4 1 3 0;
-#X restore 1253 852 pd globalFX;
+#X restore 1239 838 pd globalFX;
 #X obj 1396 750 r rootnote;
 #N canvas 1378 209 450 300 snare 1;
 #X obj 29 15 inlet;
@@ -1234,6 +1236,11 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X restore 1447 786 pd snare;
+#X obj 17 9 r loadbang;
+#X text 77 495 Click here to test 'constellation open';
+#X text 361 565 Click here to test 'keyboard press';
+#X text 1260 707 Click here to test 'clap';
+#X text 498 135 OSC input routing;
 #X connect 4 0 5 0;
 #X connect 4 0 30 0;
 #X connect 5 0 19 0;
@@ -1326,3 +1333,4 @@ decay 0.677165 \, input_diffusion1 0.850394 \, input_diffusion2 0.92126
 #X connect 72 0 70 1;
 #X connect 73 0 71 0;
 #X connect 73 0 71 1;
+#X connect 74 0 13 0;
