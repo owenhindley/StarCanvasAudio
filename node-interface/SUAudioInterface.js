@@ -5,7 +5,7 @@ var udp = dgram.createSocket("udp4");
 
 function SUAudioInterface() {
 	
-	this.broadcastPort = 8081;
+	this.broadcastPort = 8000;
 	this.ip = "localhost";
 
 }
